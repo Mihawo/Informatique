@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void echange (int tab1[], int tab2[], int length)
+{
+  int i,temp,var;
+  for (i=0;i<length;i++)
+    {
+      if (tab1[i]
+      temp=tab[i];
+      tab[i]=tab[taille-i-1];
+      tab[taille-i-1]=temp;
+    }
+}
+
+int main ()
+{
+
+
+}

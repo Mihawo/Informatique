@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int check (int tab[], int length)
+{
+
+  int i,j;
+  for(i=0;i<length;i++)
+    {
+      if((tab[i]<=0 && tab[i]>=length-1)
+
+int main ()
+{
+}

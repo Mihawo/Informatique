@@ -1,0 +1,14 @@
+// Dessiner.java
+package test;
+import java.awt.Graphics;
+import javax.swing.JPanel;
+ 
+@SuppressWarnings( "serial" )
+public class Dessiner extends JPanel
+{
+    public void paintComponent( Graphics g )
+    {
+        System.out.println( "Méthode paintConponent" );
+        g.fillOval( 20, 20, 75, 75 );
+    }
+}

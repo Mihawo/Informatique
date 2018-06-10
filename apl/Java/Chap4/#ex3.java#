@@ -1,0 +1,18 @@
+import java.util.*;
+
+class volaille{
+    int prix;
+    int poids_abattage;
+    int poids;
+
+    volaille(int pri,int poi,int poa){
+	setPrix(pri);
+	setPoids(poi);
+    }
+
+
+
+}
+
+class poulet extends volaille{
+    poulet(int arg){

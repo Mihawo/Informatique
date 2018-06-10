@@ -1,0 +1,106 @@
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class MainPanel extends JPanel implements MouseMotionListener, MouseListener {
+
+    int [][] coord = new int[16][16];
+    int MX=0;
+    int MY=0;
+    static int depart=0;
+    Coord CaseDepart=null;
+    ArrayList<Coord> route=null;
+
+    public MainPanel(){
+	setBackground(Color.gray);
+	setSize(800, 1000);
+	addMouseListener(this);
+	addMouseMotionListener(this);
+    }
+
+    public void mouseDragged(MouseEvent e){
+	MX=e.getX()/50;
+	MY=e.getY()/50;
+	
+	if(SwingUtilities.isLeftMouseButton(e) && ControlPanel.b==1){
+	    coord[MY][MX]=1;
+	    repaint();
+	}
+	
+	if(SwingUtilities.isRightMouseButton(e) && ControlPanel.b==1){
+	    coord[MY][MX]=0;
+	    repaint();
+	}
+    }
+    
+    @Override
+	public void mouseMoved(MouseEvent e){
+    }
+
+    @Override
+	public void mouseClicked(MouseEvent e){
+	MX=e.getX()/50;
+	MY=e.getY()/50;
+	
+	if(SwingUtilities.isLeftMouseButton(e) && ControlPanel.b==2){
+	    coord[MY][MX]=3;
+	    repaint();
+	}
+	
+	else if(SwingUtilities.isRightMouseButton(e) && ControlPanel.b==2){
+	    if(coord[MY][MX]==3){
+		depart=0;
+		coord[MY][MX]=0;
+		repaint();
+	    }
+	}
+    }
+
+    @Override
+	public void mousePressed(MouseEvent e){
+    }
+
+    @Override
+	public void mouseReleased(MouseEvent e){
+    }
+
+    @Override
+	public void mouseEntered(MouseEvent e){
+    }
+
+    @Override
+	public void mouseExited(MouseEvent e){
+    }
+
+    @Override
+	public void paintComponent(Graphics g){
+	int x=0;
+	int y=0;
+	super.paintComponent(g);
+
+	for(int i=0; i<coord.length; i++){
+	    for(int j=0; j<coord[i].length; j++)
+		{
+		    if(coord[i][j]==1){
+			g.setColor(Color.red);
+			g.fillRect(x,y,49,49);
+		    }
+
+		    if(coord[i][j]==3 && depart==0){
+			g.setColor(Color.gray);
+			g.fillRect(x,y,49,49);
+			depart=1;
+		    }
+
+		    if(coord[i][j]==0){
+			g.setColor(Color.YELLOW);
+			g.fillRect(x,y,49,49);
+		    }
+		    x+=50;
+		}
+	    x=0;
+	    y+=50;
+	}
+    }
+}

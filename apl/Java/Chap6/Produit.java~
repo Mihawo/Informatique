@@ -1,0 +1,39 @@
+import java.time.*;
+import java.util.*;
+
+public abstract class Produit {
+    private float poids;
+    private float coutFabrication;
+    private float prixVente;
+    private LocalDate dateLimite;
+
+    public Produit (float p,float c,float p2,LocalDate d){
+	poids=Math.max(0f,c);
+	coutFabrication=Math.max(0f,c);
+	prixVente=Math.max(0f,p2);
+	dateLimite=d;
+    }
+
+    public void setPrixVente(int x){
+	if (x<0)
+	    return;
+	this.prixVente=x;
+    }
+	
+    public float getPoids(){
+	return poids;
+    }
+	
+    public float getCoutFabrication(){
+	return coutFabrication;
+    }
+	
+    public float prixVente(){
+	return prixVente;
+    }
+	
+    public LocalDate getDateLimite(){
+	return dateLimite;
+    }
+}
+

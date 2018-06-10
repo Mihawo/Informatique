@@ -1,0 +1,448 @@
+#include <stdio.h>
+#include <stdlib.h>
+int chiffre1(int e1, int e2,int e3,int e4,int e5) {
+  if (e1>=e2 && e1>=e3 && e1>=e4 && e1>=e5)
+    return e1;
+  else if (e2>=e1 && e2>=e3 && e2>=e4 && e2>=e5)
+    return e2;
+  else if (e3>=e1 && e3>=e2 && e3>=e4 && e3>=e5)
+    return e3;
+  else if (e4>=e1 && e4>=e2 && e4>=e3 && e4>=e5)
+    return e4;
+  else if (e5>=e1 && e5>=e2 && e5>=e3 && e5>=e4)
+    return e5;
+}
+
+int chiffre2(int e1,int e2,int e3,int e4,int e5){
+  if (e1<=e2 && e1>=e3 && e1>=e4 && e1>=e5 || e1>=e2 && e1<=e3 && e1>=e4 && e1>=e5 || e1>=e2 && e1>=e3 && e1<=e4 && e1>=e5 || e1>=e2 && e1>=e3 && e1>=e4 && e1<=e5)
+    return e1;
+  else if (e2<=e1 && e2>=e3 && e2>=e4 && e2>=e5 || e2>=e1 && e2<=e3 && e2>=e4 && e2>=e5 || e2>=e1 && e2>=e3 && e2<=e4 && e2>=e5 || e2>=e1 && e2>=e3 && e2>=e4 && e2<=e5)
+    return e2;
+  else if (e3<=e1 && e3>=e2 && e3>=e4 && e3>=e5 || e3>=e1 && e3<=e2 && e3>=e4 && e3>=e5 || e3>=e1 && e3>=e2 && e3<=e4 && e3>=e5 || e3>=e1 && e3>=e2 && e3>=e4 && e3<=e5)
+    return e3;
+  else if (e4<=e1 && e4>=e2 && e4>=e3 && e4>=e5 || e4>=e1 && e4<=e2 && e4>=e3 && e4>=e5 || e4>=e1 && e4>=e2 && e4<=e3 && e4>=e5 || e4>=e1 && e4>=e2 && e4>=e3 && e4<=e5)
+    return e4;
+  else if (e5<=e1 && e5>=e2 && e5>=e3 && e5>=e4 || e5>=e1 && e5<=e2 && e5>=e3 && e5>=e4 || e5>=e1 && e5>=e2 && e5<=e3 && e5>=e4 || e5>=e1 && e5>=e2 && e5>=e3 && e5<=e4)
+    return e5;
+}
+
+int chiffre3(int e1,int e2,int e3,int e4,int e5){
+  if (e1>=e2 && e1<=e3 && e1<=e4 && e1>=e5 || e1<=e2 && e1>=e3 && e1<=e4 && e1>=e5 || e1<=e2 && e1<=e3 && e1>=e4 && e1>=e5 || e1>=e2 && e1>=e3 && e1<=e4 && e1<=e5 || e1<=e2 && e1>=e3 && e1>=e4 && e1<=e5 || (e1>=e2 && e1<=e3 && e1>=e4 && e1<=e5))
+    return e1;
+  else if (e2>=e1 && e2<=e3 && e2<=e4 && e2>=e5 || e2<=e1 && e2>=e3 && e2<=e4 && e2>=e5 || e2<=e1 && e2<=e3 && e2>=e4 && e2>=e5 || e2>=e1 && e2>=e3 && e2<=e4 && e2<=e5 || e2<=e1 && e2>=e3 && e2>=e4 && e2<=e5 || (e2>=e1 && e2<=e3 && e2>=e4 && e2<=e5))
+    return e2;
+  else if (e3>=e1 && e3<=e2 && e3<=e4 && e3>=e5 || e3<=e1 && e3>=e2 && e3<=e4 && e3>=e5 || e3<=e1 && e3<=e2 && e3>=e4 && e3>=e5 || e3>=e1 && e3>=e2 && e3<=e4 && e3<=e5 || e3<=e1 && e3>=e2 && e3>=e4 && e3<=e5 || (e3>=e1 && e3>=e2 && e3<=e4 && e3<=e5))
+    return e3;
+  else if (e4>=e1 && e4<=e2 && e4<=e3 && e4>=e5 || e4<=e1 && e4>=e2 && e4<=e3 && e4>=e5 || e4<=e1 && e4<=e2 && e4>=e3 && e4>=e5 || e4>=e1 && e4>=e2 && e4<=e3 && e4<=e5 || e3<=e1 && e3>=e2 && e3>=e4 && e3<=e5 || (e4>=e1 && e4>=e2 && e4<=e3 && e4<=e5))
+    return e4;
+  else if (e5>=e1 && e5<=e2 && e5<=e3 && e5>=e4 || e5<=e1 && e5>=e2 && e5<=e3 && e5>=e4 || e5<=e1 && e5<=e2 && e5>=e3 && e5>=e4 || e5>=e1 && e5>=e2 && e5<=e3 && e5<=e4 || e5<=e1 && e5>=e2 && e5>=e3 && e5<=e4 && (e5>=e1 && e5<=e2 && e5>=e3 && e5>=e4))
+    return e5;
+}
+
+int chiffre4(int e1,int e2,int e3,int e4,int e5){
+  if (e1>=e2 && e1<=e3 && e1<=e4 && e1<=e5 || e1<=e2 && e1>=e3 && e1<=e4 && e1<=e5 || e1<=e2 && e1<=e3 && e1>=e4 && e1<=e5 || e1<=e2 && e1<=e3 && e1<=e4 && e1>=e5)
+    return e1;
+  else if (e2>=e1 && e2<=e3 && e2<=e4 && e2>=e5 || e2<=e1 && e2>=e3 && e2<=e4 && e2<=e5 || e2<=e1 && e2<=e3 && e2>=e4 && e2<=e5 || e2<=e1 && e2<=e3 && e2<=e4 && e2>=e5)
+    return e2;
+  else if (e3>=e1 && e3<=e2 && e3<=e4 && e3<=e5 || e3<=e1 && e3>=e2 && e3<=e4 && e3<=e5 || e3<=e1 && e3<=e2 && e3>=e4 && e3<=e5 || e3<=e1 && e3<=e2 && e3<=e4 && e3>=e5)
+    return e3;
+  else if (e4>=e1 && e4<=e2 && e4<=e3 && e4<=e5 || e4<=e1 && e4>=e2 && e4<=e3 && e4<=e5 || e4<=e1 && e4<=e2 && e4>=e3 && e4<=e5 || e4<=e1 && e4<=e2 && e4<=e3 && e4>=e5)
+    return e4;
+  else if (e5>=e1 && e5<=e2 && e5<=e3 && e5<=e4 || e5<=e1 && e5>=e2 && e5<=e3 && e5<=e4 || e5<=e1 && e5<=e2 && e5>=e3 && e5<=e4 || e5<=e1 && e5<=e2 && e5<=e3 && e5>=e4)
+    return e5;
+}
+
+int chiffre5(int e1,int e2,int e3,int e4,int e5) {
+  if (e1<=e2 && e1<=e3 && e1<=e4 && e1<=e5)
+    return e1;
+  else if (e2<=e1 && e2<=e3 && e2<=e4 && e2<=e5)
+    return e2;
+  else if (e3<=e1 && e3<=e2 && e3<=e4 && e3<=e5)
+    return e3;
+  else if (e4<=e1 && e4<=e2 && e4<=e3 && e4<=e5)
+    return e4;
+  else if (e5<=e1 && e5<=e2 && e5<=e3 && e5<=e4)
+    return e5;
+}
+
+int carre(int e1,int e2,int e3,int e4) {
+  if (e1==e2 && e2==e3 && e3==e4)
+    return e1;
+  else return 0;
+}
+
+int paire (int e1,int e2){
+  if (e1==e2)
+    return e1;
+  else return 0;
+}
+
+int brelan (int e1,int e2,int e3){
+  if ((e1==e2) && (e2==e3))
+    return e1;
+  else return 0;
+}
+
+int suite(int e1,int e2,int e3,int e4,int e5){
+  if (e1==e2+1 && e2==e3+1 && e3==e4+1 && e4==e5+1)
+    return 1;
+  else return 0;
+}
+
+int couleur(char c1,char c2,char c3,char c4,char c5){
+  if (c1==c2 && c2==c3 && c3==c4 && c4==c5)
+    return 1;
+  else return 0;
+}
+
+int main () {
+  
+  int e1,e2,e3,e4,e5; //valeur joueur 1
+  int e6,e7,e8,e9,e10; //valeur joueur 2
+  
+  char c1,c2,c3,c4,c5; //couleur j1
+  char c6,c7,c8,c9,c10; //couleurj2
+
+  int pre1,deu1,tro1,qua1,cin1; //decroissant j1
+  int pre2,deu2,tro2,qua2,cin2; //decroissant j2
+
+  int p11,p12,p13,p14,p21,p22,p23,p24; //paire j1 & j2
+  int b11,b12,b13,b21,b22,b23; //brelan j1 & j2
+  int s1,s2; //suite j1 & j2
+  int coul1,coul2; //couleur j1 & j2
+  int carre11,carre12,carre21,carre22; //carré j1 & j2
+
+  scanf("%d %c %d %c %d %c %d %c %d %c %d %c %d %c %d %c %d %c %d %c",&e1,&c1,&e2,&c2,&e3,&c3,&e4,&c4,&e5,&c5,&e6,&c6,&e7,&c7,&e8,&c8,&e9,&c9,&e10,&c10);
+
+  if (e1==1)
+    e1=14;
+  else if (e2==1)
+    e2=14;
+  else if (e3==1)
+    e3=14;
+  else if (e4==1)
+    e4=14;
+  else if (e5==1)
+    e5=14;
+  else if (e6==1)
+    e6=14;
+  else if (e7==1)
+    e7=14;
+  else if (e8==1)
+    e8=14;
+  else if (e9==1)
+    e9=14;
+  else if (e10==1)
+    e10=14;
+  
+  pre1=chiffre1(e1,e2,e3,e4,e5);
+  deu1=chiffre2(e1,e2,e3,e4,e5);
+  tro1=chiffre3(e1,e2,e3,e4,e5);
+  qua1=chiffre4(e1,e2,e3,e4,e5);
+  cin1=chiffre5(e1,e2,e3,e4,e5);
+  
+  pre2=chiffre1(e6,e7,e8,e9,e10);
+  deu2=chiffre2(e6,e7,e8,e9,e10);
+  tro2=chiffre3(e6,e7,e8,e9,e10);
+  qua2=chiffre4(e6,e7,e8,e9,e10);
+  cin2=chiffre5(e6,e7,e8,e9,e10);
+
+  coul1=couleur(c1,c2,c3,c4,c5);
+  coul2=couleur(c6,c7,c8,c9,c10);
+
+  carre11=carre(pre1,deu1,tro1,qua1);
+  carre12=carre(deu1,tro1,qua1,cin1);
+
+  carre21=carre(pre2,deu2,tro2,qua2);
+  carre22=carre(deu2,tro2,qua2,cin2);
+
+  s1=suite(pre1,deu1,tro1,qua1,cin1);
+  s2=suite(pre2,deu2,tro2,qua2,cin2);
+  
+  b11=brelan(pre1,deu1,tro1);
+  b12=brelan(deu1,tro1,qua1);
+  b13=brelan(tro1,qua1,cin1);
+
+  b21=brelan(pre2,deu2,tro2);
+  b22=brelan(deu2,tro2,qua2);
+  b23=brelan(tro2,qua2,cin2);
+
+  p11=paire(pre1,deu1);
+  p12=paire(deu1,tro1); // paire j1
+  p13=paire(tro1,qua1);
+  p14=paire(qua1,cin1);
+
+  p21=paire(pre2,deu2);
+  p22=paire(deu2,tro2); // paire j2
+  p23=paire(tro2,qua2);
+  p24=paire(qua2,cin2);
+
+
+  //carré
+  if (carre11==pre1 || carre12==deu1)
+    {
+      if (carre21==pre2 || carre22==deu2)
+	{
+	  if (pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+	    printf("Player1 wins\n");
+	  else if (pre1<pre2 ||pre1==pre2 && deu1<deu2 || pre1==pre2 && deu1==deu2 && tro1<tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1<qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1<cin2)
+	    printf("Player2 wins\n");
+	  else printf("Draw\n");
+	}
+      else printf("Player1 wins\n");
+    }
+
+  else if (carre21==pre2 || carre22==deu2)
+    {
+      if (carre11==pre1 || carre12==deu1)
+	{
+	  if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+	    printf("Player2 wins\n");
+	  else if (pre2<pre1 || pre1==pre2 && deu2<deu1 || pre1==pre2 && deu1==deu2 && tro2<tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2<qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2<cin1)
+	    printf("Player1 wins\n");
+	  else printf("Draw\n");
+	}
+      else printf("Player2 wins\n");
+    }
+  
+  
+  //full
+  else if (b11==tro1 && p14==cin1 || b13==cin1 && p11==deu1)
+    {
+      if (b21==tro2 && p24==cin2 || b23==cin2 && p21==deu2)
+	{
+	  if (b11>b21 || b12>b22 || b13>b23)
+	    printf("Player1 wins\n");
+	  else if (b11==b21 || b12==b22 || b13==b23)
+	    {
+	      if(p11>p21 || p14>p24)
+		printf("Player1 wins\n");
+	      else if(p11<p21 || p14<p24)
+		printf("Player2 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player2 wins\n");
+	}
+      else printf("Player1 wins\n");
+    }
+  
+  else if (b21==tro2 && p24==cin2 || b23==cin2 && p21==deu2)
+    {
+      if (b11==tro1 && p14==cin1 || b13==cin1 && p11==deu1)
+	{
+	  if (b21>b11 || b22>b12 || b23>b13)
+	    printf("Player2 wins\n");
+	  else if (b21==b11 || b22==b12 || b23==b13)
+	    {
+	      if(p21>p11 || p24>p14)
+		printf("Player2 wins\n");
+	      else if (p21<p11 || p24<p14)
+		printf("Player1 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player1 wins\n");
+	}
+      else printf("Player2 wins\n");
+    }
+
+  //couleur
+  else if (coul1==1)
+    {
+      if (coul2==1)
+	{
+	  if (pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+	    printf("Player1 wins\n");
+	  else if (pre1<pre2 ||pre1==pre2 && deu1<deu2 || pre1==pre2 && deu1==deu2 && tro1<tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1<qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1<cin2)
+	    printf("Player2 wins\n");
+	  else printf("Draw\n");
+	}
+      else printf("Player1 wins\n");
+    }
+
+   else if (coul2==1)
+     {
+       if (coul1==1)
+	 {
+	   if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+	     printf("Player2 wins\n");
+	   else if (pre2<pre1 || pre1==pre2 && deu2<deu1 || pre1==pre2 && deu1==deu2 && tro2<tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2<qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2<cin1)
+	     printf("Player1 wins\n");
+	   else printf("Draw\n");
+	 }
+       else printf("Player2 wins\n");
+     }
+   
+  //suite
+   else if (pre1==deu1+1 && deu1==tro1+1 && tro1==qua1+1 && qua1==cin1+1)
+    {
+      if (s2==1)
+	{
+	  if(pre1>pre2)
+	    printf("Player1 wins\n");
+	  else if (pre1<pre2)
+	    printf("Player2 wins\n");
+	  else printf("Draw\n");
+	}
+      else printf("Player1 wins\n");
+    }
+
+  else if (s2==1)
+    {
+      if (pre1==deu1+1 && deu1==tro1+1 && tro1==qua1+1 && qua1==cin1+1)
+	{
+	  if(pre2>pre1)
+	    printf("Player2 wins\n");
+	  else if (pre2<pre1)
+	    printf("Player1 wins\n");
+	  else printf("Draw\n");
+	}
+      else printf("Player2 wins\n");
+    }
+
+  else if (pre1==14 && deu1==5 && tro1==4 && qua1==3 && cin1==2)
+    {
+      if (pre2==14 && deu2==5 && tro2==4 && qua2==3 && cin2==2)
+	printf("Draw\n");
+      else if (s2==1)
+	{
+	  if (deu1>pre2)
+	    printf("Player1 wins\n");
+	  else printf("Player2 wins\n");
+	}
+      else printf("Player1 wins\n");
+    }
+
+ else if (pre2==14 && deu2==5 && tro2==4 && qua2==3 && cin2==2)
+    {
+      if (pre1==14 && deu1==5 && tro1==4 && qua1==3 && cin1==2)
+	printf("Draw\n");
+      else printf("Player2 wins\n");
+    }
+
+  //brelan
+  else if (b11==tro1 || b12==qua1 || b13==cin1)
+    {
+      if (b21==tro2 || b22==qua2 || b23==cin2)
+	{
+	  if (b11>b21 || b12>b22 || b13>b23)
+	    printf("Player1 wins\n");
+	  else if (b11==b21 || b12==b22 || b13==b23)
+	    {
+	      if(pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+		printf("Player1 wins\n");
+	      else if(pre1<pre2 ||pre1==pre2 && deu1<deu2 || pre1==pre2 && deu1==deu2 && tro1<tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1<qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1<cin2)
+		printf("Player2 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player2 wins\n");
+	}
+      else printf("Player1 wins\n");
+    }
+
+  else if (b21==tro2 || b22==qua2 || b23==cin2)
+    {
+      if (b11==tro1 || b12==qua1 || b13==cin1)
+	{
+	  if (b21>b11 || b22>b12 || b23>b13)
+	    printf("Player2 wins\n");
+	  else if (b21==b11 || b22==b12 || b23==b13 )
+	    {
+	      if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+		printf("Player2 wins\n");
+	      else if (pre2<pre1 || pre1==pre2 && deu2<deu1 || pre1==pre2 && deu1==deu2 && tro2<tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2<qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2<cin1)
+		printf("Player1 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player1 wins\n");
+	}
+      else printf("Player2 wins\n");
+    }
+
+  //double paire
+  else if (p11==pre1 && p13==tro1 || p12==deu1 && p14==qua1 || p11==pre1 && p14==qua1)
+    {
+      if (p21==pre2 && p23==tro2 || p22==deu2 && p24==qua2 || p21==pre2 && p24==qua2)
+	{
+	  if (p11>p21 || p12>p22 || p13>p23 || p14>p24)
+	    printf("Player1 wins\n");
+	  else if (p11==p21 || p12==p22 || p13==p23 || p14==p24)
+	    {
+	      if(pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+		printf("Player1 wins\n");
+	      else if (pre1<pre2 ||pre1==pre2 && deu1<deu2 || pre1==pre2 && deu1==deu2 && tro1<tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1<qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1<cin2)
+		printf("Player2 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player2 wins\n");
+	}
+      else printf("Player1 wins\n");
+    }
+  
+  else if (p21==pre2 && p23==tro2 || p22==deu2 && p24==qua2 || p21==pre2 && p24==qua2)
+    {
+      if (p11==pre1 && p13==tro1 || p12==deu1 && p14==qua1 || p11==pre1 && p14==qua1)
+	{
+	  if (p21>p11 || p22>p12 || p23>p13 || p24>p14)
+	    printf("Player2 wins\n");
+	  else if (p21==p11 || p22==p12 || p23==p13 || p24==p14)
+	    {
+	      if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+		printf("Player2 wins\n");
+	      else if (pre2<pre1 || pre1==pre2 && deu2<deu1 || pre1==pre2 && deu1==deu2 && tro2<tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2<qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2<cin1)
+		printf("Player1 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player1 wins\n");
+	}
+      else printf("Player2 wins\n");
+    }
+
+
+  //paire
+  else if (p11==pre1 || p12==deu1 || p13==tro1 || p14==qua1)
+    {
+      if (p21==pre2 || p22==deu2 || p23==tro2 || p24==qua2)
+	{
+	  if (p11>p21 || p12>p22 || p13>p23 || p14>p24)
+	    printf("Player1 wins\n");
+	  else if (p11==p21 || p12==p22 || p13==p23 || p14==p24)
+	    {
+	      if(pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+		printf("Player1 wins\n");
+	      else if (pre1<pre2 ||pre1==pre2 && deu1<deu2 || pre1==pre2 && deu1==deu2 && tro1<tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1<qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1<cin2)
+		printf("Player2 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player2 wins\n");
+	}
+      else printf("Player1 wins\n");
+    }
+ 
+  else if (p21==pre2 || p22==deu2 || p23==tro2 || p24==qua2)
+    {
+      if (p11==pre1 || p12==deu1 || p13==tro1 || p14==qua1)
+	{
+	  if (p21>p11 || p22>p12 || p23>p13 || p24>p14)
+	    printf("Player2 wins\n");
+	  else if (p21==p11 || p22==p12 || p23==p13 || p24==p14)
+	    {
+	      if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+		printf("Player2 wins\n");
+	      else if (pre2<pre1 || pre1==pre2 && deu2<deu1 || pre1==pre2 && deu1==deu2 && tro2<tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2<qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2<cin1)
+		printf("Player1 wins\n");
+	      else printf("Draw\n");
+	    }
+	  else printf("Player1 wins\n");
+	}
+      else printf("Player2 wins\n");
+    }
+  
+  // QUELCONQUE
+  
+  else if(pre2>pre1 || pre1==pre2 && deu2>deu1 || pre1==pre2 && deu1==deu2 && tro2>tro1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua2>qua1 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin2>cin1)
+    printf("Player2 wins\n");
+  else if (pre1>pre2 || pre1==pre2 && deu1>deu2 || pre1==pre2 && deu1==deu2 && tro1>tro2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1>qua2 || pre1==pre2 && deu1==deu2 && tro1==tro2 && qua1==qua2 && cin1>cin2)
+    printf("Player1 wins\n");
+  else printf("Draw\n");
+  return 0;
+}

@@ -1,0 +1,119 @@
+
+TESTS
+-amin "-n"   le fichier a ete accede il y a n minutes.
+-anewer "file" ou file est un fichier. donne le dernier acces plus recent que la modification du fichier file.
+-atime "-n" la meme que minutes mais avec des cycles de 24h. n*24h.
+-cmin "-n" le statut du fichier a ete change il y a n minutes.
+-cnewer "file" derniere modification du statut du fichier plus recent que celle de file.
+-ctime "-n" la memem que atime. les cycles de 24h
+-empty affiche les fichiers et dossiers vides.
+-executable affiche les fichiers/dossiers avec la permission "x"
+-false affiche les false
+-mmin "-n" les data ont ete modifies il ya "n" minutes.
+-mtime "-n" la meme que minutes mais avec des cycles de 24H.
+-name "pattern" les trucs avec les wildcards ex (*.txt)
+-newer "file" les fichiers modifiés plus recemment que  "file"
+-path "pattern" rentrer le chemin
+-perm "mode" la somme des permissions precise (ex 775)
+-perm -"mode" au moins le mode >(ex 775)
+-perm /"mode" au moins une des permissions (ex 775)
+-readable avec la permission "r"
+-size "-n" [cwbkMG] en fonction du nombre d'octet
+-true
+-type "caractere (c, f, d)" affiche les fichiers selon leur caractere( f = file || d = directory) 
+-writable affiche les f/d avec la permission "w"
+
+
+
+OPTIONS 
+-maxdepth "n" il  va chercher en descendant de "n"  dans l'arborescence. Ex : maxdepth 1 , il va chercher là où l'on se trouve et par exemple un dossier en dessous.
+-mindepth "n" il va chercher tout ce qui est 	au dessus de "n" . Ex: si mindepth 1, il va chercher partout sauf au point de depart.
+
+ACTIONS
+
+ -print True; print le nom du fichier + un retour a la ligne
+
+
+  -print0
+              True; print the full file name on the standard output,  followed
+              by  a  null  character  (instead  of  the newline character that
+              -print uses).  This allows file names that contain  newlines  or
+              other  types  of white space to be correctly interpreted by pro‐
+              grams that process the find output.  This option corresponds  to
+              the -0 option of xargs.
+-printf format
+              True;  print  format  on  the  standard output, interpreting `\'
+              escapes and `%' directives.  Field widths and precisions can  be
+              specified  as  with  the  `printf' C function.  Please note that
+              many of the fields are printed as %s rather than  %d,  and  this
+              may  mean  that flags don't work as you might expect.  This also
+              means that the `-' flag does work (it forces fields to be  left-
+              aligned).   Unlike -print, -printf does not add a newline at the
+              end of the string.
+
+		format a savoir :
+		-\n nouvelle ligne
+		-\t horizontal tab
+		-\v vertical tab
+		-\NNN donne le caractere ascii dont le code eest NNN
+		-%Ak    File's  last  access  time  in the format specified by k,
+                     which is either `@' or a directive for the  C  `strftime'
+                     function.   The  possible  values for k are listed below;
+                     some of them might not be available on all  systems,  due
+                     to differences in `strftime' between systems.
+
+		-%Ck File's last status change time in the format specified by
+                     k, which is the same as for %A.
+
+		-%d indique la profondeur dans l'arborescence
+		-%f File's  name  with  any leading directories removed (only
+                     the last element).
+
+		-%h Leading directories of file's name (all but the last ele‐
+                     ment).  If the file name contains no slashes (since it is
+                     in the current directory) the  %h  specifier  expands  to
+                     ".".
+
+		-%H Starting-point under which file was found.
+		-%m File's permission bits (in octal).  This option uses  the
+                     `traditional'  numbers  which  most  Unix implementations
+                     use,  but  if  your  particular  implementation  uses  an
+                     unusual  ordering of octal permissions bits, you will see
+                     a difference between the actual value of the file's  mode
+                     and  the output of %m.   Normally you will want to have a
+                     leading zero on this number, and to do this,  you  should
+                     use the # flag (as in, for example, `%#m').
+		-%M affiche les permissions rwx.
+
+		-%P File's name with the name  of  the  starting-point  under
+                     which it was found removed.
+
+		-%p le nom du fichier
+		-%s taille du fichier en octets
+		-%Tk File's  last modification time in the format specified by
+                     k, which is the same as for %A.
+
+		-%y type du fichier
+
+-prune True;  ne pas descendre dans l'arborescence.
+
+       -quit  Exit  immediately.  No child processes will be left running, but
+              no more paths specified on the command line will  be  processed.
+              For example, find /tmp/foo /tmp/bar -print -quit will print only
+              /tmp/foo.  Any command lines  which  have  been  built  up  with
+              -execdir  ... {} + will be invoked before find exits.   The exit
+              status may or may not be zero, depending on whether an error has
+              already occurred
+
+
+redirection , pipes etc :
+comm < file 2 : redirection de l'entree standard de comm vers le file2
+> "file", redirige la sortie standard  des resultats vers le file. se reinitialise a chaque fois.
+>> "file", la même mais s'ajoute a la fin, ne se reinitialise pas.
+2>"file"  redirige la sortie standards des erreurs vers le fichier apres.
+2>> "file" la meme mais s'ajoute a la fin.
+both 2> &1 : redirige la sortie standards des erreurs vers le meme fichier indiqu& pour rediriger la sortie standards des resultats.
+ command && command : execute les deux commandes.
+ command || command : execute la premiere, si fausse la deuxieme
+ command | command  : la sortie standards des resultats de la commande a gauche du | est utilisé pour etre redirigé vers l'entree standard  de la commande a droite du symbole |
+wc : compte le nombre de lignes de mots et de caracteres (bytes) contenu dans des fichiers donnes en arguments. wc-l == le nombre de lignes          ex find "something" | wc-l comptera le nombre de fichiers trouvés.

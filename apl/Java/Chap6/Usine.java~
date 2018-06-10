@@ -1,0 +1,28 @@
+import java.time.*;
+import java.util.*;
+
+public class Usine {
+    private String nom;
+    private String nomVille;
+
+    public Usine (String n,String n2){
+	nom=n;
+	nomVille=n2;
+    }
+
+    public void setNom(String no){
+	this.nom=no;
+    }
+
+    public void setNomVille(String no2){
+	this.nomVille=no2;
+    }
+
+    public String getNom(){
+	return nom;
+    }
+
+    public String getNomVille(){
+	return nomVille;
+    }
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int f2() {
+   int i1, i2, i3;
+   scanf("%d", &i1);
+   scanf("%d", &i2);
+   scanf("%d", &i3);   
+   
+   if (i1 >= i2) {
+      if (i1 >= i3)
+         printf("%d\n", i1);
+      else
+         printf("%d\n", i3);
+   } else {
+      if (i2 >= i3)
+         printf("%d\n", i2);      
+      else
+         printf("%d\n", i3);
+   }
+    
+   return 0;
+}

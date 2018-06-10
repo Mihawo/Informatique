@@ -1,0 +1,18 @@
+class Cool {
+    Cool(int i) {
+	Terminal.ecrireStringln("constructeur de Cool");
+    }
+}
+class Raoul extends Cool {
+    Raoul() {
+	Terminal.ecrireStringln("constructeur de Raoul");
+    }
+}
+
+class ex2{
+    public static void main(String[] args){
+	new Cool(2);
+	System.out.println("=============================");
+	new Raoul();
+    }
+}

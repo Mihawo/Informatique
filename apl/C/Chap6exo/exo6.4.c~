@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void inverse (int tab[], int taille) {
+  
+  int i,temp;
+  
+  for (i=0;i<taille;i++)
+    {
+      temp=tab[i];
+      tab[i]=tab[taille-i-1];
+      tab[taille-i-1]=temp;
+    }
+}

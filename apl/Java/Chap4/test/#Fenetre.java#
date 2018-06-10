@@ -1,0 +1,23 @@
+// Fenetre.java
+import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+ 
+@SuppressWarnings( "serial" )
+public class Fenetre extends JFrame
+{
+    JPanel panel = new JPanel();
+    Fenetre( String nom, int largeur, int hauteur )
+    {
+        this.setTitle( nom );
+        this.setSize( largeur, hauteur );
+        this.setLocationRelativeTo( null );
+        this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        this.setContentPane( new Dessiner() );
+        this.setVisible( true );
+    }
+    public void changerCouleur()
+    {
+        panel.setBackground( Color.orange );
+    }
+}

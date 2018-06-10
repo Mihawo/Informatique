@@ -1,0 +1,8 @@
+import java.time.*;
+import java.util.*;
+
+public class poeleChampignon extends Produit {
+    public poeleChampignon (LocalDate vente){
+	super(150f,2f,3.90f,vente.plusYears(3));
+    }
+}

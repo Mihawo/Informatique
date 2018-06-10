@@ -1,0 +1,10 @@
+import java.time.*;
+import java.util.*;
+
+public class CodeProduit {
+
+    public static final int lasagnes = 1;
+    public static final int choucroute = 2;
+    public static final int poele = 3;
+
+}

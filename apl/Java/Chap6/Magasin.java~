@@ -1,0 +1,43 @@
+import java.time.*;
+import java.util.*;
+
+public class Magasin {
+    private String nom;
+    private String nomVille;
+    private LinkedList<Produit> liste;
+
+    public Magasin (String n,String n2){
+	nom=n;
+	nomVille=n2;
+    }
+
+    public void ajouterProduit (Produit produit){
+	if(produit==null)
+	    return;
+
+	else liste.add(produit);
+    }
+
+    public int vendreProduit(int codeProduit, int quantite, LocalDate aujourdhui){
+	int taille=liste.size;
+<
+	for (int i=0;i<size;i++){
+
+
+
+    public void setNom(String no){
+	this.nom=no;
+    }
+
+    public void setNomVille(String no2){
+	this.nomVille=no2;
+    }
+
+    public String getNom(){
+	return nom;
+    }
+
+    public String getNomVille(){
+	return nomVille;
+    }
+}

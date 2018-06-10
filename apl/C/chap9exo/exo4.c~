@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void syracus(int m) {
+
+  if(m==1)
+    {
+      printf("%d\n",m);
+      return;
+    }
+
+  else if(m%2==0)
+    {
+      printf("%d\n",m);
+      m=m/2;
+      syracus(m);
+    }
+
+  else 
+    {
+      printf("%d\n",m);
+      m=3*m+1;
+      syracus(m);
+    }
+
+}
+
+int main() {
+  syracus(300);
+  return 0;
+}
+
+ 

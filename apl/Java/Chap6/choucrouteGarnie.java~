@@ -1,0 +1,8 @@
+import java.time.*;
+import java.util.*;
+
+public class choucrouteGarnie extends Produit {
+    public choucrouteGarnie (LocalDate vente) {
+	super(240f,1.80f,3.40f,vente.plusYears(5));
+    }
+}

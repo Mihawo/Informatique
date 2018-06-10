@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+
+  int e1,e2,e3,v1,v2,v3,r1,r2,r3,res;
+  scanf("%d %d %d",&e1,&e2,&e3);
+  v1=e1%7;
+  v2=e2%7;
+  v3=e3%7;
+
+  r1=e1%2;
+  r2=e2%2;
+  r3=e3%2;
+
+  res= ((v1==0 && v2==0 && v3==0) || (r1==0 && r2==0 && r3!=0) || (r1==0 && r2!=0 && r3==0) || (r1!=0 && r2==0 && r3==0));
+  
+  printf("%d\n",res);
+  return 0;
+}

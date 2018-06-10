@@ -1,0 +1,3 @@
+#include <stdio.h>
+
+int modulo (int a,int b) {

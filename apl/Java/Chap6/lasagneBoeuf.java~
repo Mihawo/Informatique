@@ -1,0 +1,8 @@
+import java.time.*;
+import java.util.*;
+
+public class lasagneBoeuf extends Produit {
+    public lasagneBoeuf (LocalDate vente) {
+	super(280f,0.30f,3.40f,vente.plusYears(3));
+    }
+}
