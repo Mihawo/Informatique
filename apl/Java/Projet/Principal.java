@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Principal extends JPanel 
+public class Principal extends JPanel
 {
     int passe=0;
 
@@ -27,4 +27,5 @@ public class Principal extends JPanel
 	    return;
 
 	if(tour==0 && tab[y][x-1]==2 && tab[y][x+1]==2 && tab[y+1][x]==2 && tab[y+1][x]==2)
-	    
+    return;
+  
