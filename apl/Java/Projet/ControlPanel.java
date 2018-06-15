@@ -6,6 +6,7 @@ import java.awt.event.*;
 public class ControlPanel extends JPanel{
 
     static int b=0;
+    MainPanel mPanel = new MainPanel();
     public ControlPanel(){
 	setSize(200, 1000);
 
@@ -51,5 +52,7 @@ public class ControlPanel extends JPanel{
 
   	}
 	    });
+          add(mPanel);
     }
+
 }

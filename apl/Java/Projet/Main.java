@@ -10,12 +10,10 @@ public class Main extends JFrame{
 		setLocation(0,0);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    MainPanel mPanel= new MainPanel();
     ControlPanel cPanel= new ControlPanel();
 
 
-    add(mPanel);
-    add(cPanel,BorderLayout.EAST);
+    add(cPanel);
     setVisible(true);
   }
 
