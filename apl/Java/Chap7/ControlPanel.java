@@ -1,4 +1,4 @@
-javaimport java.util.*;
+import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -22,22 +22,22 @@ public class ControlPanel extends JPanel{
 	add(jrb2);
 
 	jrb1.addActionListener(new ActionListener() {
-	  
+
 	    @Override
 	    public void actionPerformed (ActionEvent e)
 		{
 		    b=1;
 		}
 	    });
-	
+
 	jrb2.addActionListener(new ActionListener() {
-		
+
 	    @Override
 	    public void actionPerformed (ActionEvent e)
 		{
 		    b=2;
 		}
 	    });
-	
+
     }
 }
