@@ -22,18 +22,18 @@ public class MainPanel extends JPanel implements MouseMotionListener, MouseListe
     public void mouseDragged(MouseEvent e){
 	MX=e.getX()/50;
 	MY=e.getY()/50;
-	
+
 	if(SwingUtilities.isLeftMouseButton(e) && ControlPanel.b==1){
 	    coord[MY][MX]=1;
 	    repaint();
 	}
-	
+
 	if(SwingUtilities.isRightMouseButton(e) && ControlPanel.b==1){
 	    coord[MY][MX]=0;
 	    repaint();
 	}
     }
-    
+
     @Override
 	public void mouseMoved(MouseEvent e){
     }
@@ -42,12 +42,12 @@ public class MainPanel extends JPanel implements MouseMotionListener, MouseListe
 	public void mouseClicked(MouseEvent e){
 	MX=e.getX()/50;
 	MY=e.getY()/50;
-	
+
 	if(SwingUtilities.isLeftMouseButton(e) && ControlPanel.b==2){
 	    coord[MY][MX]=3;
 	    repaint();
 	}
-	
+
 	else if(SwingUtilities.isRightMouseButton(e) && ControlPanel.b==2){
 	    if(coord[MY][MX]==3){
 		depart=0;
