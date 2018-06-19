@@ -46,6 +46,13 @@ public class MainPanel extends JPanel
       int x = (e.getX()  / tailleCarre);
       int y = (e.getY() / tailleCarre);
 
+      if(e.getX()>x*50+25) {
+        x=x+1;
+      }
+      if(e.getY()>y*50+25) {
+        y=y+1;
+      }
+
       String s = new String();
       System.out.println(s.format("x:%d - y:%d", x, y));
 
@@ -92,7 +99,7 @@ public class MainPanel extends JPanel
       x=0;
       y=y+tailleCarre;
     }
-
+    
 
 
           }
