@@ -10,7 +10,7 @@ public class AppareilPhoto extends JPanel {
 		this.fen=f;
 		this.setLayout(new BorderLayout());
 
-		this.setLayout(new ListenerDeux(this.fen));
+		this.addMouseListener(new ListenerDeux(this.fen));
 		this.bouton=new CercleBouton();
 		this.add(this.bouton,BorderLayout.SOUTH);
 	}

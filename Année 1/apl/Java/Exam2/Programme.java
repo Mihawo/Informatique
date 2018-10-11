@@ -6,6 +6,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.lang.*;
 
-public class Programme {    
+public class Programme {
 
 }
