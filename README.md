@@ -1,6 +1,6 @@
 # Informatique
 
-Ce dépot réunit tout le travail accompli
+Ce dépot réunit tout le travail accompli en DUT Informatique
 
 ## Langages utilisés
 
